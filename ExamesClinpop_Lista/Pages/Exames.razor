@@ -1,0 +1,83 @@
+﻿@page "/exames"
+@using ExamesClinpop_Lista.Data;
+@using System.Text.Json
+@inject IExameService ExameService
+@inject NavigationManager NavigationManager
+
+<button class="btn btn-success"
+@onclick="CreateNewExames">
+	Criar Novo Exame
+</button>
+<br />
+<br />
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Preço</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var exame in ExameService.Exames)
+		{
+			<tr>
+				<td>@exame.NomeExame</td>
+				<td>@exame.PrecoExame</td>
+				<td>@exame.DescricaoExame</td>
+				<td>
+					<a class="btn btn-primary" @onclick="@(()=>ShowExame(exame.ExameId))">
+						<i class="oi oi-pencil"></i> Editar
+					</a>
+				</td>
+                <td><a class="btn btn-danger" @onclick="@(()=> DeletarCategoria(exame.ExameId))" style="color:white">
+					<i class="oi oi-trash"></i> Deletar</a> </td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+
+<Confirma @ref="confirma" onCancela="@CancelaConfirma" onConfirma="@DeletaConfirma">
+    <div>Deseja realmente excluir este item ?</div>
+</Confirma>
+<hr />
+
+@code 
+{
+	List<Exame> exames{ get; set; }
+	Confirma confirma;
+
+	protected override async Task OnInitializedAsync()
+	{
+		await ExameService.GetExames();
+	}
+	void ShowExame(int id)
+	{
+		NavigationManager.NavigateTo($"exame/{id}");
+	}
+	void CreateNewExames()
+	{
+		NavigationManager.NavigateTo("exame");
+	}
+	int codigoExame;
+	void DeletarCategoria(int exameId)
+	{
+		confirma.Exibir();
+		codigoExame = exameId;
+	}
+	async Task DeletaConfirma()
+	{
+		await ExameService.DeleteExame(codigoExame);
+		confirma.Ocultar();
+		await ExameService.GetExames();
+		NavigationManager.NavigateTo("exames");
+	}
+	
+	
+	void CancelaConfirma()
+	{
+		confirma.Ocultar();
+	}
+	
+}

@@ -1,0 +1,87 @@
+﻿@page "/exame"
+@page "/exame/{id:int}"
+@using ExamesClinpop_Lista.Data
+@inject IExameService ExameService
+@inject NavigationManager NavigationManager
+
+@if (Id is null)
+{
+    <PageTitle>Novo Exame</PageTitle>
+    <h3>Novo Exame:</h3>
+}
+else
+{
+    <PageTitle>Editar @exame.NomeExame</PageTitle>
+    <h3>Editar @exame.NomeExame</h3>
+}
+
+<EditForm Model="exame" OnSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div>
+        <label for="title">Nome</label>
+        <InputText id="title" @bind-Value="exame.NomeExame" class="form-control" />
+        <ValidationMessage For="@(()=> exame.NomeExame)" />
+    </div>
+    <div>
+        <label for="category">Descrição</label>
+        <InputText id="category" @bind-Value="exame.DescricaoExame" class="form-control" />
+        <ValidationMessage For="@(()=> exame.DescricaoExame)" />
+    </div>
+    <div>
+        <label for="price">Preço</label>
+        <InputNumber id="price" @bind-Value="exame.PrecoExame" class="form-control" />
+        <ValidationMessage For="@(()=> exame.PrecoExame)" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">@btnText</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    string btnText = string.Empty;
+
+    Data.Exame exame =
+    new ExamesClinpop_Lista.Data.Exame { };
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            btnText = Id == null ? "Salve Novo Exame" : "Update Exame";
+            
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            exame = await ExameService.GetExameById((int)Id);
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        
+            if (Id is null)
+            {
+                await ExameService.CreateExame(exame);
+                NavigationManager.NavigateTo("exames");
+                
+            }
+            else
+            {
+                await ExameService.UpdateExame((int)Id, exame);
+                NavigationManager.NavigateTo("exames");
+                
+            }
+        
+    }
+}

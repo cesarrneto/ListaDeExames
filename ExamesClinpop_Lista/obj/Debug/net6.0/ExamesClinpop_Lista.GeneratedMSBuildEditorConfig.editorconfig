@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ExamesClinpop_Lista
+build_property.RootNamespace = ExamesClinpop_Lista
+build_property.ProjectDir = C:\Users\Usuario\source\repos\ExamesClinpop_Lista\ExamesClinpop_Lista\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Usuario\source\repos\ExamesClinpop_Lista\ExamesClinpop_Lista
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/Confirma.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlybWEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/Exame.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhhbWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/Exames.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhhbWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Shared/Paginacao.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2luYWNhby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-p18sdqbp8g
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-shxdxasylo
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ExamesClinpop_Lista/ExamesClinpop_Lista/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
